@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "96e220eb-39e9-41de-8545-65bb8c9220e2",
+		"name": "YouTube",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16401804"
+	},
+	"item": [
+		{
+			"name": "Review",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/beratyesbek/Desktop/steps.png"
+						},
+						{
+							"key": "review",
+							"value": "{\n  \"review\": \"This product is amazing! Highly recommend it.\",\n  \"productId\": 100,\n  \"userId\": 50,\n  \"rating\": 5\n}",
+							"contentType": "application/json",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/product_reviews",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product_reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/product_reviews/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"product_reviews",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
